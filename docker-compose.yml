@@ -1,0 +1,16 @@
+version: '2'
+services:
+  db:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: app_dev
+      MYSQL_ROOT_PASSWORD: password
+  web:
+    build: .
+    command: mix phoenix.server
+    volumes:
+      - .:/app
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
