@@ -4,5 +4,11 @@ You need to install docker-compose
 docker-compose up -d
 docker-compose run web npm install
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+docker-compose run web mix phoenix.gen.json User users name:string sex:integer
+docker-compose run web mix ecto.migrate
 
+docker-compose run web mix phoenix.server
+
+You can visit below url.
+http://localhost:4000/
+http://localhost:4000/users
