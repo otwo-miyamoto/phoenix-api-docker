@@ -23,5 +23,6 @@ You can visit below url.
 
 #Memo
 Ecto command.
-    docker-compose run web mix phoenix.gen.json User users name:string sex:integer
-    docker-compose run web mix ecto.migrate
+
+    $ docker-compose run web mix phoenix.gen.json User users name:string sex:integer
+    $ docker-compose run web mix ecto.migrate
