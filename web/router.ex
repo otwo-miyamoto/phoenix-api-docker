@@ -17,7 +17,14 @@ defmodule App.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    resources "/users", UserController, except: [:new, :edit]
+  end
+
+  scope "/api", App do
+    pipe_through :api
+
+    scope "/v1" do
+        resources "/users", UserController, except: [:new, :edit]
+    end
   end
 
   # Other scopes may use custom stacks.
