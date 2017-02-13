@@ -6,6 +6,9 @@ start docker container.
     
     $ docker-compose up -d
 
+Get phoenix deps.
+
+    $ docker-compose run web mix deps.get
 
 Install node package.
 
