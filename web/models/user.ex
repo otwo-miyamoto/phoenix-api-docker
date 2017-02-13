@@ -4,6 +4,7 @@ defmodule App.User do
   schema "users" do
     field :name, :string
     field :email, :string
+    field :password, :string
     field :sex, :integer
 
     timestamps()
@@ -14,7 +15,7 @@ defmodule App.User do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:name, :sex])
-    |> validate_required([:name, :sex])
+    |> cast(params, [:name, :email, :password, :sex])
+    |> validate_required([:name, :email, :password, :sex])
   end
 end

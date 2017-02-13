@@ -38,6 +38,7 @@ config :app, App.Repo,
   adapter: Ecto.Adapters.MySQL,
   username: "root",
   password: "password",
+  port: "3306",
   database: "app_dev",
   hostname: "db",
   pool_size: 10

@@ -2,7 +2,7 @@ defmodule App.UserControllerTest do
   use App.ConnCase
 
   alias App.User
-  @valid_attrs %{name: "some content", sex: 42}
+  @valid_attrs %{email: "some content", name: "some content", password: "some content", sex: 42}
   @invalid_attrs %{}
 
   setup %{conn: conn} do
@@ -19,6 +19,8 @@ defmodule App.UserControllerTest do
     conn = get conn, user_path(conn, :show, user)
     assert json_response(conn, 200)["data"] == %{"id" => user.id,
       "name" => user.name,
+      "email" => user.email,
+      "password" => user.password,
       "sex" => user.sex}
   end
 
