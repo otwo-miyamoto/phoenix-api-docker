@@ -36,4 +36,4 @@ Ecto command.
 
 Access Mysql on docker from host pc.
 
-    $ mysql -u root -p -h 0.0.0.0 -P 13306
+    $ mysql -u root -p -h 0.0.0.0
