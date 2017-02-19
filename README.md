@@ -33,7 +33,7 @@ Migrate db.
 
 Start phoenix server.
 
-    $ docker-compose run web mix phoenix.server
+    $ docker-compose up -d
 
 You can visit below url.
 
