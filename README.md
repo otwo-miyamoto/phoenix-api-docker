@@ -27,6 +27,9 @@ Install node package.
 
     $ docker-compose run web npm install
 
+Migrate db.
+
+    $ docker-compose run web mix ecto.migrate
 
 Start phoenix server.
 
